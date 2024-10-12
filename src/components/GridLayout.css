@@ -1,0 +1,65 @@
+html, body {
+    height: 100%; /* Ensure the body takes full height */
+    margin: 0; /* Remove default margin */
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Two columns: first one (squares) is 1fr, second (rectangle) is 2fr */
+    grid-template-rows: repeat(2, 1fr); /* Two equal rows */
+    height: 100vh; /* Use viewport height for full height */
+    gap: 0; /* Space between grid items, adjust if needed */
+}
+
+.square {
+    background-color: lightblue; /* Optional background color */
+    padding: 16px; /* Optional padding */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center align items horizontally */
+    border: 1px solid #000; /* Optional border */
+}
+
+.rectangle {
+    background-color: lightgreen;
+    grid-column: 2; /* Position rectangle in the second column */
+    grid-row: 1 / span 2; /* Span across both rows */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 24px;
+    border: 1px solid #000; /* Optional border for visibility */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+th, td {
+border: 1px solid #ddd;
+padding: 8px;
+}
+
+th {
+background-color: #f2f2f2;
+text-align: left;
+}
+
+tr:hover {
+    background-color: lightblue; /* Change this color to your preference */
+    cursor: pointer; /* Change the cursor to indicate interactivity */
+}
+
+.square-title {
+    margin-bottom: 16px; /* Add space between header and image */
+}
+
+.square-centerpiece {
+    width: 100%; /* Ensure the image preview takes the full width */
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    flex-direction: column; /* Stack children vertically (if needed) */
+}
