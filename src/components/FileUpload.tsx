@@ -34,12 +34,15 @@ const FileUpload: React.FC<FileUploadProps> = ({refreshData, setImagePreview}) =
 
         try {
             setUploading(true)
-            const result = await uploadFile(file)
-            if (result) {
-                setSuccess(`File uploaded successfully: ${result.uuid}`)
+            const uuid = await uploadFile(file)
+            if (uuid) {
+                setSuccess(`File uploaded successfully: ${uuid}`)
                 setError(null)
                 setFile(null) // Clear the file input after successful upload
                 refreshData()
+            }
+            else {
+                throw new Error("Upload failed. Check file type or size")
             }
 
         } catch (err: any) {

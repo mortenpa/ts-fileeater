@@ -30,6 +30,8 @@ html, body {
     justify-content: flex-start;
     font-size: 24px;
     border: 1px solid #000; /* Optional border for visibility */
+    max-height: 100%;
+    overflow-y: auto;
 }
 
 table {

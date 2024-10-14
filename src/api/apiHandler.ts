@@ -24,7 +24,7 @@ export async function fetchFilesMetadata(): Promise<FileMetadata[]> {
           }
 
           const metadataJson = await response.json()
-          for (let file of metadataJson.data) {
+          for (let file of metadataJson) {
             let fileMetadata: FileMetadata = {
                 uuid: file.uuid,
                 filename: file.filename,
@@ -81,7 +81,7 @@ export async function uploadFile(file: File) {
         }
 
         const responseJson = await response.json()
-        return responseJson.data.uuid
+        return responseJson.uuid
     } catch (error) {
         console.error('Error uploading a file: ', error)
     }
