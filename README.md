@@ -1,5 +1,5 @@
 # FileEater
-FileEater is an app that takes your files and eats them. Occasionally spits them back out at you as well. Manage your backend filestorage with FileEater!
+FileEater is a tiny React app that takes your files and eats them. Occasionally spits them back out at you as well. Manage your backend filestorage with FileEater!
 
 Features:
     1. Upload pictures
